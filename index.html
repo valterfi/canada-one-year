@@ -11,9 +11,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+		<link rel="preload" href="assets/js/preload.js" as="script">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-preload loading">
+	<body id="bodyId" class="is-preload">
+
+		<script src="assets/js/preload.js" defer></script>
 
 		<!-- Header -->
 			<header id="header">
@@ -83,102 +86,22 @@
 
 					<!-- Gallery  -->
 						<div class="gallery">
-							<article class="from-left">
-								<video class="image fit" controls>
-									<source src="videos/1-ph-merged.mp4" type="video/mp4">
-								  Your browser does not support the video tag.
-								  </video>
-							</article>
-							<article class="from-right">
-								<video class="image fit" controls>
-									<source src="videos/2-cris-merged.mp4" type="video/mp4">
-								  Your browser does not support the video tag.
-								  </video>
-							</article>
-							<article class="from-left">
-								<video class="image fit" controls>
-									<source src="videos/3-bruninha-bruninho-merged.mp4" type="video/mp4">
-								  Your browser does not support the video tag.
-								  </video>
-							</article>
-							<article class="from-right">
-								<video class="image fit" controls>
-									<source src="videos/4-robson-lara-merged.mp4" type="video/mp4">
-								  Your browser does not support the video tag.
-								  </video>
-							</article>
-							<article class="from-left">
-								<video class="image fit" controls>
-									<source src="videos/5-oton-merged.mp4" type="video/mp4">
-								  Your browser does not support the video tag.
-								  </video>
-							</article>
-							<article class="from-right">
-								<video class="image fit" controls>
-									<source src="videos/6-pedrao-merged.mp4" type="video/mp4">
-								  Your browser does not support the video tag.
-								  </video>
-							</article>
-							<article class="from-left">
-								<video class="image fit" controls>
-									<source src="videos/7-ed-merged.mp4" type="video/mp4">
-								  Your browser does not support the video tag.
-								  </video>
-							</article>
-							<article class="from-right">
-								<video class="image fit" controls>
-									<source src="videos/8-rafinha-merged.mp4" type="video/mp4">
-								  Your browser does not support the video tag.
-								  </video>
-							</article>
-							<article class="from-left">
-								<video class="image fit" controls>
-									<source src="videos/9-bodao-merged.mp4" type="video/mp4">
-								  Your browser does not support the video tag.
-								  </video>
-							</article>
-							<article class="from-right">
-								<video class="image fit" controls>
-									<source src="videos/10-texeira-merged.mp4" type="video/mp4">
-								  Your browser does not support the video tag.
-								  </video>
-							</article>
-							<article class="from-left">
-								<video class="image fit" controls>
-									<source src="videos/11-ricardo-merged.mp4" type="video/mp4">
-								  Your browser does not support the video tag.
-								  </video>
-							</article>
-							<article class="from-right">
-								<video class="image fit" controls>
-									<source src="videos/12-jeffrey-merged.mp4" type="video/mp4">
-								  Your browser does not support the video tag.
-								  </video>
-							</article>
-							<article class="from-left">
-								<video class="image fit" controls>
-									<source src="videos/13-amanda-merged.mp4" type="video/mp4">
-								  Your browser does not support the video tag.
-								  </video>
-							</article>
-							<article class="from-right">
-								<video class="image fit" controls>
-									<source src="videos/14-nicolas-tici-merged.mp4" type="video/mp4">
-								  Your browser does not support the video tag.
-								  </video>
-							</article>
-							<article class="from-left">
-								<video class="image fit" controls>
-									<source src="videos/15-regis-davi-merged.mp4" type="video/mp4">
-								  Your browser does not support the video tag.
-								  </video>
-							</article>
-							<article class="from-right">
-								<video class="image fit" controls>
-									<source src="videos/16-victor-kaliana-merged.mp4" type="video/mp4">
-								  Your browser does not support the video tag.
-								  </video>
-							</article>
+							<article id="video1" class="from-left"></article>
+							<article id="video2" class="from-right"></article>
+							<article id="video3" class="from-left"></article>							
+							<article id="video4" class="from-right"></article>
+							<article id="video5" class="from-left"></article>
+							<article id="video6" class="from-right"></article>
+							<article id="video7" class="from-left"></article>
+							<article id="video8" class="from-right"></article>
+							<article id="video9" class="from-left"></article>
+							<article id="video10" class="from-right"></article>
+							<article id="video11" class="from-left"></article>
+							<article id="video12" class="from-right"></article>
+							<article id="video13" class="from-left"></article>
+							<article id="video14" class="from-right"></article>
+							<article id="video15" class="from-left"></article>
+							<article id="video16" class="from-right"></article>
 						</div>
 				</div>
 			</section>
@@ -227,38 +150,38 @@
 						arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.</p>
 					</header>
 
-					<div class="carousel" data-flickity='{ "autoPlay": 6000, "pauseAutoPlayOnHover": false }'>
-						<!-- <div class="carousel-cell">
-							<video controls>
-								<source class="fit" src="bastidores/1-bastidor.mp4" type="video/mp4">
-							  Your browser does not support the video tag.
-							  </video>
-						</div> -->
-						<div class="carousel-cell">
-							<video controls>
-								<source class="fit" src="bastidores/2-bastidor.mp4" type="video/mp4">
-							  Your browser does not support the video tag.
-							  </video>
-						</div>
-						<div class="carousel-cell">
-							<video controls>
-								<source class="fit" src="bastidores/3-bastidor.mp4" type="video/mp4">
-							  Your browser does not support the video tag.
-							  </video>
-						</div>
-						<div class="carousel-cell">
-							<video controls>
-								<source class="fit" src="bastidores/4-bastidor.mp4" type="video/mp4">
-							  Your browser does not support the video tag.
-							  </video>
-						</div>
-						<div class="carousel-cell">
-							<video controls>
-								<source class="fit" src="bastidores/5-bastidor.mp4" type="video/mp4">
-							  Your browser does not support the video tag.
-							  </video>
-						</div>
-					</div>
+					<div class="carousel" data-flickity='{ "autoPlay": 6000, "pauseAutoPlayOnHover": false }'> 
+						<!-- <div class="carousel-cell"> 
+							<video controls> 
+								<source class="fit" src="bastidores/1-bastidor.mp4" type="video/mp4"> 
+							  Your browser does not support the video tag. 
+							  </video> 
+						</div> --> 
+						<div class="carousel-cell"> 
+							<video controls> 
+								<source class="fit" src="bastidores/2-bastidor.mp4" type="video/mp4"> 
+							  Your browser does not support the video tag. 
+							  </video> 
+						</div> 
+						<div class="carousel-cell"> 
+							<video controls> 
+								<source class="fit" src="bastidores/3-bastidor.mp4" type="video/mp4"> 
+							  Your browser does not support the video tag. 
+							  </video> 
+						</div> 
+						<div class="carousel-cell"> 
+							<video controls> 
+								<source class="fit" src="bastidores/4-bastidor.mp4" type="video/mp4"> 
+							  Your browser does not support the video tag. 
+							  </video> 
+						</div> 
+						<div class="carousel-cell"> 
+							<video controls> 
+								<source class="fit" src="bastidores/5-bastidor.mp4" type="video/mp4"> 
+							  Your browser does not support the video tag. 
+							  </video> 
+						</div> 
+					</div> 
 
 					<br/>
 					<br/>

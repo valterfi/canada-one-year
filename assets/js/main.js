@@ -232,7 +232,41 @@
 				});  
 			  });
 
-			  $body = $("body");
-			  $body.removeClass("loading");
+				// $(document).on({
+				// 	ajaxStart: function() { 
+				// 		console.log('ajaxStart');    
+				// 		$body.addClass("loading");
+				// 	},
+				// 	ajaxStop: function() { 
+				// 		console.log('ajaxStop'); 
+				// 		$body.removeClass("loading");
+				// 	}    
+				// });
+
+				$( document ).ready(function() {
+					$body = $("body");
+					$body.removeClass("loading");
+					console.log("tirou");
+				});
+
+				$(window).bind("load", function() {
+					console.log("aqui");  
+					$('#video1').load('assets/html/1-movie.html');
+					$('#video2').load('assets/html/2-movie.html');
+					$('#video3').load('assets/html/3-movie.html');
+					$('#video4').load('assets/html/4-movie.html');
+					$('#video5').load('assets/html/5-movie.html');
+					$('#video6').load('assets/html/6-movie.html');
+					$('#video7').load('assets/html/7-movie.html');
+					$('#video8').load('assets/html/8-movie.html');
+					$('#video9').load('assets/html/9-movie.html');
+					$('#video10').load('assets/html/10-movie.html');
+					$('#video11').load('assets/html/11-movie.html');
+					$('#video12').load('assets/html/12-movie.html');
+					$('#video13').load('assets/html/13-movie.html');
+					$('#video14').load('assets/html/14-movie.html');
+					$('#video15').load('assets/html/15-movie.html');
+					$('#video16').load('assets/html/16-movie.html');
+				}); 
 
 })(jQuery);
