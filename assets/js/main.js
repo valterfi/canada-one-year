@@ -250,7 +250,8 @@
 				});
 
 				$(window).bind("load", function() {
-					console.log("aqui");  
+					console.log("aqui");
+					$('#movie-area').load('assets/html/bastidores-movie.html');  
 					$('#video1').load('assets/html/1-movie.html');
 					$('#video2').load('assets/html/2-movie.html');
 					$('#video3').load('assets/html/3-movie.html');
@@ -267,6 +268,10 @@
 					$('#video14').load('assets/html/14-movie.html');
 					$('#video15').load('assets/html/15-movie.html');
 					$('#video16').load('assets/html/16-movie.html');
+					$('#carousel-id-2').load('assets/html/2-carousel-movie.html');
+					$('#carousel-id-3').load('assets/html/3-carousel-movie.html');
+					$('#carousel-id-4').load('assets/html/4-carousel-movie.html');
+					$('#carousel-id-5').load('assets/html/5-carousel-movie.html');
 				}); 
 
 })(jQuery);
