@@ -232,4 +232,7 @@
 				});  
 			  });
 
+			  $body = $("body");
+			  $body.removeClass("loading");
+
 })(jQuery);
