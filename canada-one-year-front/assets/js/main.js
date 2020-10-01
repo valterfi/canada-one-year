@@ -274,8 +274,8 @@
 					$('#carousel-id-5').load('assets/html/5-carousel-movie.html');
 				}); 
 
-				//let baseUrl = 'http://localhost:5000/words/';
-				let baseUrl = 'http://valterfi.duckdns.org:5000/words/';
+				let baseUrl = 'http://localhost:5000/words/';
+				// let baseUrl = 'http://valterfi.duckdns.org:5000/words/';
 
 				var chart;
 

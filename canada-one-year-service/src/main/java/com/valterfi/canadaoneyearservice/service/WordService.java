@@ -13,6 +13,7 @@ import com.valterfi.canadaoneyearservice.domain.Word;
 import com.valterfi.canadaoneyearservice.dto.WordDTO;
 import com.valterfi.canadaoneyearservice.repository.PhraseRepository;
 import com.valterfi.canadaoneyearservice.repository.WordRepository;
+import com.valterfi.canadaoneyearservice.util.NormalizeUtil;
 
 @Service
 public class WordService {
@@ -32,16 +33,17 @@ public class WordService {
 				"um", "umas", "uns", "por", "a", "e", "i", "o", "u", "as", "os", "para", "pra", "pro", "é", "és", "à",
 				"às", "ao", "aos", "ou", "pelo", "pelos", "pela", "pelas", "no", "nos", "na", "nas", "naquele",
 				"naquela", "naqueles", "naquelas", "aquele", "aqueles", "aquela", "aquelas", "que", "quais", "quem",
-				"qual", "esse", "essa", "esses", "essas", "desse", "dessa", "desses", "dessas", ",", ";", ".", "...",
-				":", "!", "?"));
+				"qual", "esse", "essa", "esses", "essas", "desse", "dessa", "desses", "dessas"));
 
 		String[] singleWords = phrase.getDescription().split(" ");
 		for (String singleWord : singleWords) {
 			Word newWord = new Word();
 
 			String description = singleWord.trim();
+			description = NormalizeUtil.normalize(description);
+			description = description.replaceAll("[^a-zA-Z_-]", "");
 			if (!ignoreItens.contains(description)) {
-				newWord.setDescription(singleWord.trim());
+				newWord.setDescription(description);
 				newWord.setIp(phrase.getIp());
 				newWord.setTimestamp(new Timestamp(System.currentTimeMillis()));
 				wordRepository.save(newWord);
