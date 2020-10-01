@@ -984,6 +984,10 @@ input, select, textarea {
 			width: 100%;
 		}
 
+		.image.fit.video {
+			height: 253px;
+		}
+
 		.image.left {
 			float: left;
 			margin: 0 2em 2em 0;
