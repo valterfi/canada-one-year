@@ -53,10 +53,4 @@ public class NormalizeUtil {
 		return ret.toString();
 	}
 
-	public static void main(String[] args) {
-		String test = "avançamento";
-		String normalized = NormalizeUtil.normalize(test);
-		System.out.println(normalized);
-	}
-
 }
