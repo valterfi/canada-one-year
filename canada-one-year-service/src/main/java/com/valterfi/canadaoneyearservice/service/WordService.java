@@ -40,6 +40,7 @@ public class WordService {
 			Word newWord = new Word();
 
 			String description = singleWord.trim();
+			description = description.toLowerCase();
 			description = NormalizeUtil.normalize(description);
 			description = description.replaceAll("[^a-zA-Z_-]", "");
 			if (!ignoreItens.contains(description)) {
